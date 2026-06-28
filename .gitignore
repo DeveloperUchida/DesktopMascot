@@ -1,0 +1,93 @@
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Build Results
+# =========================
+[Bb]in/
+[Oo]bj/
+x64/
+x86/
+Debug/
+Release/
+
+# =========================
+# Rider / ReSharper
+# =========================
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+# NuGet
+# =========================
+packages/
+*.nupkg
+*.snupkg
+
+# Keep PackageReference projects clean
+!**/packages/build/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS Files
+# =========================
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# =========================
+# Generated Files
+# =========================
+Generated_Code/
+
+# =========================
+# Publish
+# =========================
+publish/
+artifacts/
+
+# =========================
+# Test Results
+# =========================
+TestResults/
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+
+# =========================
+# JetBrains Rider
+# =========================
+.idea/
+
+# =========================
+# Visual Studio Code
+# =========================
+.vscode/
+
+# =========================
+# WinUI / WPF Designer
+# =========================
+*.cache
+*.dbmdl
+*.opendb
+
+# =========================
+# Local Environment
+# =========================
+.env
+.env.local
