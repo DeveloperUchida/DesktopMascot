@@ -25,7 +25,15 @@ namespace DesktopMascot
                 Top = SystemParameters.WorkArea.Height - Height - 20;
             };
 
-            MouseLeftButtonDown += (_, _) =>
+            MouseLeftButtonDown += (_,e) =>
+            {
+                if (e.ClickCount == 1)
+                {
+                    DragMove();
+                }
+            };
+
+            MouseRightButtonDown += (_, _) =>
             {
                 MessageText.Text = messages[random.Next(messages.Length)];
             };
