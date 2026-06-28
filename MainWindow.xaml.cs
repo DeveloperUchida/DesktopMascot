@@ -19,6 +19,11 @@ namespace DesktopMascot
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += (_, _) =>
+            {
+                Left = SystemParameters.WorkArea.Width - Width - 20;
+                Top = SystemParameters.WorkArea.Height - Height - 20;
+            };
 
             MouseLeftButtonDown += (_, _) =>
             {
