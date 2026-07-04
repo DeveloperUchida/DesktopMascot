@@ -30,6 +30,13 @@
                 FontSize="18"
                 HorizontalAlignment="Center"
                 Text="おはよう〜！作業えらい！✨"/>
+
+            <TextBlock
+                x:Name="WorkTimeText"
+                FontSize="14"
+                HorizontalAlignment="Center"
+                Margin="0,8,0,0"
+                Text="作業時間: 00:00:00"/> 
         </StackPanel>
 
     </Border>
