@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace DesktopMascot
 {
@@ -37,6 +39,17 @@ namespace DesktopMascot
             {
                 MessageText.Text = messages[random.Next(messages.Length)];
             };
+            workTimer.Interval = TimeSpan.FromSeconds(1);
+            workTimer.Tick += (_, _) =>
+            {
+                workSeconds++;
+
+                var time = TimeSpan.FromSeconds(workSeconds);
+                WorkTimeText.Text = $"作業時間: {time:hh\\:mm\\:ss}";
+            };
+            workTimer.Start();
         }
+        private int workSeconds = 0;
+        private readonly DispatcherTimer workTimer = new();
     }
 }
