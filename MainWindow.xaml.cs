@@ -34,7 +34,7 @@ namespace DesktopMascot
                     DragMove();
                 }
             };
-
+            //右クリックの動作
             MouseRightButtonDown += (_, _) =>
             {
                 MessageText.Text = messages[random.Next(messages.Length)];
@@ -46,6 +46,11 @@ namespace DesktopMascot
 
                 var time = TimeSpan.FromSeconds(workSeconds);
                 WorkTimeText.Text = $"作業時間: {time:hh\\:mm\\:ss}";
+                //30分毎に休息メッセージ
+                if(workSeconds % 1800 == 0)
+                {
+                    MessageText.Text = "30分作業したよ〜！休憩しよ☕";
+                }
             };
             workTimer.Start();
         }
