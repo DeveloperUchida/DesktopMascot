@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+using System.IO;
+using System.Text.Json;
 
 namespace DesktopMascot
 {
@@ -33,7 +35,7 @@ namespace DesktopMascot
                 {
                     DragMove();
                 }
-            };
+            };  
             //右クリックの動作
             MouseRightButtonDown += (_, _) =>
             {

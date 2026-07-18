@@ -36,7 +36,12 @@
                 FontSize="14"
                 HorizontalAlignment="Center"
                 Margin="0,8,0,0"
-                Text="作業時間: 00:00:00"/> 
+                Text="作業時間: 00:00:00"/>
+            <Button
+                Content="🖼️ 画像を変更"
+                Margin="0,10,0,0"
+                Click="ChangeImageButton_Click"/>
+            
         </StackPanel>
 
     </Border>
