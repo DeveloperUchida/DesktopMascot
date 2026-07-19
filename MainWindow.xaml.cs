@@ -29,13 +29,13 @@ namespace DesktopMascot
                 Top = SystemParameters.WorkArea.Height - Height - 20;
             };
 
-            MouseLeftButtonDown += (_,e) =>
+            MouseLeftButtonDown += (_, e) =>
             {
                 if (e.ClickCount == 1)
                 {
                     DragMove();
                 }
-            };  
+            };
             //右クリックの動作
             MouseRightButtonDown += (_, _) =>
             {
@@ -49,7 +49,7 @@ namespace DesktopMascot
                 var time = TimeSpan.FromSeconds(workSeconds);
                 WorkTimeText.Text = $"作業時間: {time:hh\\:mm\\:ss}";
                 //30分毎に休息メッセージ
-                if(workSeconds % 1800 == 0)
+                if (workSeconds % 1800 == 0)
                 {
                     MessageText.Text = "30分作業したよ〜！休憩しよ☕";
                 }
@@ -58,5 +58,20 @@ namespace DesktopMascot
         }
         private int workSeconds = 0;
         private readonly DispatcherTimer workTimer = new();
+
+        private readonly string settingsPath =
+            Path.Combine(
+
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "DesktopMascot",
+                "setting.json"
+                );
+        private AppSettings settings = new();
+
+        private void LoadSettings()
+        {
+            if (!File.Exists(settingsPath)) return;
+
+        }
     }
 }
